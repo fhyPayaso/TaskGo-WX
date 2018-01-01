@@ -1,0 +1,70 @@
+<!--pages/order/order.wxml-->
+<view wx:if="{{tt}}">
+  <view class='title'>
+    <text class='txtTotal'>总数</text>
+    <text class='txtTotalnumber'>{{totalNumber}}</text>
+    <image bindtap="finish" class='imgFinish' src="http://oz3rf0wt0.bkt.clouddn.com/17-12-27/58919740.jpg" wx:if="{{finishBtn}}"></image>
+    <image bindtap="finish" class='imgFinish' src="http://oz3rf0wt0.bkt.clouddn.com/17-12-27/5400134.jpg" wx:else></image>
+    <image bindtap="noFinish" class='imgNoFinish' src="http://oz3rf0wt0.bkt.clouddn.com/17-12-27/12250600.jpg" wx:if="{{noFinishBtn}}"></image>
+    <image bindtap="noFinish" class='imgNoFinish' src="http://oz3rf0wt0.bkt.clouddn.com/17-12-27/77493493.jpg" wx:else></image>
+  </view>
+  <view wx:if="{{ifFinish}}">
+    <view class="information" wx:for="{{noFinishArray}}" wx:key="{{item.id}}">
+      <view class="divide" style="background:#F5F5F5;height:15rpx;"></view>
+      <view class="blockTest" style=" display: flex;">
+        <view style="display:flex;flex-direction:column;">
+          <view style="margin-top:20rpx;margin-left:100rpx">
+            <text style="margin-top:30rpx;color:#4A90E2;font-size:48rpx;margin-top:1rpx；">{{item.address}}</text>
+            <text style="margin-left:50rpx;font-size:36rpx;">{{mode[item.type]}}</text>
+          </view>
+          <view style="width:430rpx;margin-top:20rpx;margin-left:50rpx;color:gray;font-size:30rpx;margin-bottom:20rpx">
+            <text>发布时间:</text>
+            <text>{{item.created_at}}</text>
+          </view>
+        </view>
+        <button bindtap="btnCofirm" data-id="{{item.id}}" data-index="{{index}}" style='height:52rpx;width:113rpx;font-size:21rpx;background-color:#3F93F5;color:#FFFFFF;margin-top:80rpx'>确 认</button>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <view class="information" wx:for="{{finishArray}}" wx:key="this">
+      <view class="divide" style="background:#F5F5F5;height:15rpx;"></view>
+      <view class="blockTest" style=" display: flex;margin-left:50rpx;margin-bottom:20rpx">
+        <view style="display:flex;flex-direction:column;">
+          <view style="margin-top:20rpx;margin-left:30rpx;">
+            <text style="margin-top:30rpx;color:#4A90E2;font-size:48rpx;margin-top:1rpx">{{item.address}}</text>
+            <text style="margin-left:50rpx;font-size:36rpx;">{{mode[item.type]}}</text>
+          </view>
+          <view style="margin-top:20rpx;margin-left:40rpx;color:gray;font-size:30rpx;">
+            <text>发布时间:</text>
+            <text>{{item.created_at}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:else>
+  <view class='title'>
+    <text class='txtTotal'>总数</text>
+    <text class='txtTotalnumber'>{{totalNumber}}</text>
+  </view>
+  <view wx:if="{{ifFinish}}">
+    <view class="information" wx:for="{{userArray}}" wx:key="this">
+      <view class="divide" style="background:#F5F5F5;height:15rpx;"></view>
+      <view class="blockTest" style=" display: flex;margin-left:100rpx;margin-bottom:20rpx">
+        <view style="display:flex;flex-direction:column;">
+          <view style="margin-top:20rpx;margin-left:30rpx;">
+            <text style="font-size:48rpx;color:#3F93F5;">{{state[item.status]}}</text>
+            <text style="color:#828283;font-size:42rpx;margin-left:40rpx">{{item.address}}</text>
+            <text style="margin-left:50rpx;color:#828283;font-size:36rpx;">{{mode[item.type]}}</text>
+          </view>
+          <view style="width:500rpx;margin-top:20rpx;margin-left:20rpx;color:gray;font-size:30rpx;margin-bottom:20rpxr">
+            <text>发布时间:</text>
+            <text>{{item.created_at}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

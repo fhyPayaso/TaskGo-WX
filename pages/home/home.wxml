@@ -1,0 +1,44 @@
+<view class='container'>
+  <button class='btn_release' catchtap="showDialog" wx:if="{{showBtn}}" style='margin-bottom:100rpx'>
+    <text style='color:#4A90E2;font-size: 40rpx'>发布任务</text>
+  </button>
+  <button class='btn_accept' catchtap="onBtnAcceptClick" wx:if="{{showBtn}}">
+    <text style='color:#4A90E2;font-size: 40rpx'>接受任务</text>
+    <text style='color:grey;font-size: 25rpx'>(仅限管理者使用)</text>
+  </button>
+  <button class='btn_order' catchtap="onBtnOrderClick" wx:if="{{showBtn}}" style='margin-top: 100rpx'>
+    <text style='color:#4A90E2;font-size: 40rpx'>订单管理</text>
+  </button>
+</view>
+<view class="modal-mask" bindtap="hideModal" wx:if="{{showDialog}}"></view>
+<view class="modal-dialog" wx:if="{{showDialog}}">
+  <view class='dialog_container'>
+    <view class='dialog_number'>
+      <image style='width:40rpx;height:40rpx' src='http://p0y1qzu73.bkt.clouddn.com/17-12-28/81234709.jpg'></image>
+      <text class='txt_number' style='color:#4A90E2;font-size: 40rpx;margin-left:10rpx '>宿舍号</text>
+      <view style='margin-left:50rpx'>
+        <input class='input' name='address' bindinput='addressInput' maxlength='4' style='width: 200rpx'></input>
+        <view style='  width: 200rpx;background: #4A90E2;height: 1rpx'></view>
+      </view>
+    </view>
+    <view class='dialog_form'>
+      <image style='width:40rpx;height:40rpx' src='http://p0y1qzu73.bkt.clouddn.com/17-12-28/91458015.jpg'></image>
+      <text style='color:#4A90E2;font-size: 40rpx;margin-left:10rpx;margin-right:5rpx'>取水形式</text>
+      <button class='btn_send' size='mini' bindtap='onSendClick' style='background:{{bg_send}}'>
+        <text style='color:white;font-size: 20rpx'>送水上门</text>
+      </button>
+      <button class='btn_self' size='mini' bindtap='onSelfClick' style='background:{{bg_self}}'>
+        <text style='color:white;font-size: 20rpx'>自提</text>
+      </button>
+    </view>
+    <view class='dialog_money'>
+      <image style='width:120rpx;height:110rpx;margin-right:10rpx' src='http://p0y1qzu73.bkt.clouddn.com/17-12-28/53002457.jpg'></image>
+      <text style='color:#4A90E2;font-size:100rpx'>{{txt_money}}</text>
+    </view>
+    <view class='dialog_cofirm'>
+      <button class='btn_cofirm' bindtap='onPayClick' style='background:#4A90E2'>
+        <text style='color:white;font-size:30rpx'>提交</text>
+      </button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,93 @@
+/* .userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx 50rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #828283;
+  font-size: 22px;
+}
+
+.usermotto {
+  margin-top: 200px;
+} */
+
+.number{
+  color: #4A90E2;
+  font-size: 32px;
+  margin-top: 15rpx;
+  margin-left: 50rpx;
+
+}
+
+.water_way{
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  font-size: 22px;
+}
+
+.date_order{
+  margin-top: 16rpx;
+  font-size: 18px;
+  color: grey;  
+  margin-left: 50rpx;
+}
+
+.date_num{
+  margin-top: 16rpx;
+  font-size: 18px;
+  color: grey;
+
+
+}
+
+.division{
+  height: 12rpx;
+  background: gray;
+  color: gray;
+  margin-top: 15rpx;
+
+}
+
+.receive{
+  margin-top: 10rpx;
+  height: 58rpx;
+  width: 122rpx;
+  margin-left: 590rpx;
+}
+
+.summary{
+  font-size: 22px;
+  color: #4A90E2;
+  margin-left: 50rpx;
+}
+
+.user_summary{
+  font-size: 22px;
+  color: #4A90E2; 
+  
+}
+
+.rapid_num{
+  height: 58rpx;
+  width: 202rpx;
+  margin-left: 310rpx;
+  /* display: table; */
+   /* color: white; */
+
+}
+
+/* .rapid text {
+  vertical-align:middle;
+  display: table-cell;
+  size: 22rpx;
+  color: white;
+} */

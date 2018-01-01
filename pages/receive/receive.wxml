@@ -1,0 +1,40 @@
+<view class='title' style='display:flex;flex-direction:row;'>
+
+  <text class='summary'>总数：</text>
+  <text class='user_summary'>{{totalnumber}}</text>
+  <!-- <button class='rapid' src='http://oz3rf0wt0.bkt.clouddn.com/17-12-27/4074899.jpg'></button>  -->
+
+  <!-- <button class='rapid'style='background:#4A90E2'>一键接受</button>  -->
+
+  <image bindtap="rapid" class='rapid_num' src='http://oz3rf0wt0.bkt.clouddn.com/17-12-27/4074899.jpg'></image>
+
+</view>
+
+
+<view class="textListModel" style='display:flex;flex-direction:column;' wx:for="{{textArray}}" wx:key="*this">
+
+  <view class='division' style='height:14rpx;background:#F5F5F5'>
+  </view>
+
+  <view class="textContent" style='display:flex;flex-direction:row;'>
+
+
+    <view style='display:flex;flex-direction:column;'>
+
+      <view style='display:flex;flex-direction:row;'>
+        <text class='number'>{{item.address}}</text>
+        <text class='water_way'>送水上门</text>
+      </view>
+
+      <view style='display:flex;flex-direction:row;'>
+        <text class='date_order'>下单日期：</text>
+        <text class='date_num'>{{item.created_at}}</text>
+      </view>
+
+      <image class='receive' bindtap="receive_tap" data-id="{{item.id}}"src="http://oz3rf0wt0.bkt.clouddn.com/17-12-27/23317696.jpg"></image>
+
+    </view>
+
+  </view>
+
+</view>
